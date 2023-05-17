@@ -29,11 +29,11 @@ n_head = 6
 n_layer = 6
 dropout = 0.2
 
-# ------------
+# -----------
 
 torch.manual_seed(1337)
 
-# wget https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
+# read file
 with open('input.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 
@@ -237,8 +237,6 @@ for iter in range(max_iters):
 
 # saving
 # torch.save(model.state_dict(), 'model_weights.pth')
-
-# loading
 
 # model.load_state_dict(torch.load('model_weights.pth'))
 
